@@ -35,7 +35,7 @@ namespace SeniorProject_1
             {
                 if (reader.Read())
                 {
-                    loginResponse_TXT.Text = "SUCCESS! 😎 Logged in";
+                    loginResponse_TXT.Text = "SUCCESS2! 😎 Logged in";
                 }
                 else
                 {
