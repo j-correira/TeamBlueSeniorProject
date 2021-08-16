@@ -1,8 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentPage.aspx.cs" Inherits="SeniorProject_1.StudentPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>This is student page...!</h1>
-    <div style="background-color:azure;">
-        <table border="1">
+
+
+        <div style="background-color:#dfe6e9;">
+    <h1 class="title is-4" style="padding: 20px;">Adding new Student</h1>
+    </div>
+
+
+    <div class="box" style="width:80%; margin-top: 30px;">
+        <table class="table is-striped">
             <tr>
                 <td>Student First Name</td>
                 <td>
@@ -65,7 +71,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="ButStudent" runat="server" Text="Insert record" OnClick="ButStudent_Click" /></td>
+                    <asp:Button ID="ButStudent" runat="server" Text="Add new Student" OnClick="ButStudent_Click" /></td>
                 <td>
                     <asp:Label ID="Labmsg" runat="server" Text=" " ForeColor="Green"></asp:Label></td>
             </tr>

@@ -1,8 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TutorPage.aspx.cs" Inherits="SeniorProject_1.TutorPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>This is the tutor page</h1>
-    <div style="background-color:azure;">
-        <table border="1">
+
+
+
+
+
+
+    <div style="background-color:#dfe6e9;">
+    <h1 class="title is-4" style="padding: 20px;">Adding new Teacher</h1>
+    </div>
+
+
+
+
+
+    <div class="box" style="width:80%; margin-top: 30px;">
+        <table class="table is-striped">
             <tr>
                 <td>Teacher name: </td>
                 <td>
