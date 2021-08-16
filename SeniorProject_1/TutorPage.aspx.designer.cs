@@ -11,79 +11,88 @@ namespace SeniorProject_1
 {
 
 
-    public partial class SiteMaster
+    public partial class TutorPage
     {
 
         /// <summary>
-        /// form1 control.
+        /// TxtTutorname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox TxtTutorname;
 
         /// <summary>
-        /// LabUserLogin control.
+        /// TxtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabUserLogin;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// LnkCourse control.
+        /// TxtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkCourse;
+        protected global::System.Web.UI.WebControls.TextBox TxtPhone;
 
         /// <summary>
-        /// LnkTeacher control.
+        /// DDLCourse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkTeacher;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCourse;
 
         /// <summary>
-        /// LnkStudent control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkStudent;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// LnkAdmin control.
+        /// TxtQualifications control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkAdmin;
+        protected global::System.Web.UI.WebControls.TextBox TxtQualifications;
 
         /// <summary>
-        /// LnkLogout control.
+        /// LitJoinDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkLogout;
+        protected global::System.Web.UI.WebControls.Literal LitJoinDate;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// ButTutor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button ButTutor;
+
+        /// <summary>
+        /// Labmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labmsg;
     }
 }
