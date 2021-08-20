@@ -123,6 +123,24 @@ namespace SeniorProject_1
         protected global::System.Web.UI.WebControls.Literal LitJoinDate;
 
         /// <summary>
+        /// TxtSUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtSUsername;
+
+        /// <summary>
+        /// TxtSPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtSPassword;
+
+        /// <summary>
         /// ButStudent control.
         /// </summary>
         /// <remarks>
