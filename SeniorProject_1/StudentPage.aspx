@@ -69,16 +69,6 @@
                 <td>
                     <asp:Literal ID="LitJoinDate" runat="server"></asp:Literal> </td>
             </tr>
-             <tr>
-            <td>Student Username</td>
-                <td>
-                    <asp:TextBox ID="TxtSUsername" runat="server"></asp:TextBox></td>
-            </tr>
-             <tr>
-            <td>Student Password</td>
-                <td>
-                    <asp:TextBox ID="TxtSPassword" runat="server"></asp:TextBox></td>
-            </tr>
             <tr>
                 <td>
                     <asp:Button ID="ButStudent" runat="server" Text="Add new Student" OnClick="ButStudent_Click" /></td>
