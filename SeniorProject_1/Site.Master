@@ -30,11 +30,11 @@
                 <h1 class="title is-3" style="color:white; padding-top:20px;"><asp:Label ID="LabUserLogin" runat="server" Text=""></asp:Label></h1>
                 <h2 class="subtitle is-6" style="color:white"><%= DateTime.Now %></h2>
 
-                <asp:LinkButton ID="LnkCourse" runat="server" OnClick="LnkCourse_Click" CssClass="button is-info">Course</asp:LinkButton>&nbsp&nbsp&nbsp
-                <asp:LinkButton ID="LnkTeacher" runat="server" OnClick="LnkTeacher_Click" CssClass="button is-info">Teacher</asp:LinkButton>&nbsp&nbsp&nbsp
-                <asp:LinkButton ID="LnkStudent" runat="server" OnClick="LnkStudent_Click" CssClass="button is-info">Student</asp:LinkButton>&nbsp&nbsp&nbsp
-                <asp:LinkButton ID="LnkAdmin" runat="server" OnClick="LnkAdmin_Click" CssClass="button is-info">Admin</asp:LinkButton>&nbsp&nbsp&nbsp
-                <asp:LinkButton ID="LnkLogout" runat="server" OnClick="LnkLogout_Click" CssClass="button is-warning is-outlined">LogOut</asp:LinkButton>&nbsp&nbsp&nbsp
+                <asp:LinkButton ID="LnkCourse" runat="server" OnClick="LnkCourse_Click" CssClass="button is-info" CausesValidation="false">Course</asp:LinkButton>&nbsp&nbsp&nbsp
+                <asp:LinkButton ID="LnkTeacher" runat="server" OnClick="LnkTeacher_Click" CssClass="button is-info" CausesValidation="false">Teacher</asp:LinkButton>&nbsp&nbsp&nbsp
+                <asp:LinkButton ID="LnkStudent" runat="server" OnClick="LnkStudent_Click" CssClass="button is-info" CausesValidation="false">Student</asp:LinkButton>&nbsp&nbsp&nbsp
+                <asp:LinkButton ID="LnkAdmin" runat="server" OnClick="LnkAdmin_Click" CssClass="button is-info" CausesValidation="false">Admin</asp:LinkButton>&nbsp&nbsp&nbsp
+                <asp:LinkButton ID="LnkLogout" runat="server" OnClick="LnkLogout_Click" CssClass="button is-warning is-outlined" CausesValidation="false">LogOut</asp:LinkButton>&nbsp&nbsp&nbsp
             </div>
         </div>
                   
