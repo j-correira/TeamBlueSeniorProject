@@ -14,7 +14,10 @@ namespace SeniorProject_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!this.IsPostBack)
+            {
+                this.DataBind();
+            }
         }
 
         protected void Butsubmit_Click(object sender, EventArgs e)
@@ -36,6 +39,7 @@ namespace SeniorProject_1
                 GdCourse.DataSource = dt;
                 GdCourse.DataBind();
 
+
             }
             else if (DDL1.SelectedItem.Text == "student1")
             {
@@ -53,8 +57,8 @@ namespace SeniorProject_1
                 GdTutor.DataSource = dt;
                 GdTutor.DataBind();
             }
-            
-            
+
+
 
             sqlconn.Close();
         }
@@ -67,7 +71,7 @@ namespace SeniorProject_1
         protected void GdCourse_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             GridViewRow row = GdCourse.Rows[e.RowIndex];
-            int Cid =(int)GdCourse.DataKeys[e.RowIndex].Values[0];
+            int Cid = (int)GdCourse.DataKeys[e.RowIndex].Values[0];
             string cname = (row.Cells[2].Controls[0] as TextBox).Text;
             string Duration = (row.Cells[3].Controls[0] as TextBox).Text;
             string Fees = (row.Cells[4].Controls[0] as TextBox).Text;
@@ -95,6 +99,7 @@ namespace SeniorProject_1
 
         protected void GdCourse_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+
             int Cid = (int)GdCourse.DataKeys[e.RowIndex].Values[0];
 
             string mainconn = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
@@ -114,7 +119,7 @@ namespace SeniorProject_1
             GdStudent.EditIndex = -1;
         }
 
-      
+
         protected void GdStudent_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GdStudent.EditIndex = e.NewEditIndex;
@@ -187,8 +192,8 @@ namespace SeniorProject_1
             string Tphone = (row.Cells[4].Controls[0] as TextBox).Text;
             string Tcourse = (row.Cells[5].Controls[0] as TextBox).Text;
             string Tqualification = (row.Cells[6].Controls[0] as TextBox).Text;
-            
-           
+
+
 
             string mainconn = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
@@ -201,11 +206,10 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@Tphone", Tphone);
             sqlcomm.Parameters.AddWithValue("@Tcourse", Tcourse);
             sqlcomm.Parameters.AddWithValue("@Tqualification", Tqualification);
-           
+
             sqlcomm.ExecuteNonQuery();
-
-
             sqlconn.Close();
+            GdTutor.DataBind();
         }
 
         protected void GdTutor_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -220,11 +224,23 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@id", id);
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
+
+            GdTutor.DataBind();
+
+
         }
 
         protected void GdTutor_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GdTutor.EditIndex = e.NewEditIndex;
+        }
+
+        protected void GdTutor_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GdTutor.EditIndex)
+            {
+                (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to edit this row?');";
+            }
         }
     }
 }

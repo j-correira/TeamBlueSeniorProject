@@ -26,5 +26,10 @@ namespace SeniorProject_1
                 Labmsg.Text = "Failed login details...";
             }
         }
+
+        protected void ButCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

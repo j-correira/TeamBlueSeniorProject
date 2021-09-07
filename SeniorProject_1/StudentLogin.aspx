@@ -63,6 +63,7 @@
 
                     <div class="field">
                         <asp:Button ID="Button1" runat="server" Text="Login" CssClass="button is-info" OnClick="Button1_Click"/>
+                        <asp:Button ID="Button2" runat="server" Text="Cancel" CssClass="button is-info" OnClick="Button2_Click"/>
                         <br />
                         <br />
                         <asp:Label id="Labmsg" runat="server" Text="" ForeColor="Red"></asp:Label>

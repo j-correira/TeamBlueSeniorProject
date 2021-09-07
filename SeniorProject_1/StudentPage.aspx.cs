@@ -28,8 +28,8 @@ namespace SeniorProject_1
         {
             string mainconn = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "Insert into [dbo].[student1] (Stfname,Stlname,Stfathername,StfatherPhone,StEmail,Stphone,CourseJoin,CourseFees,Firstinstallment,FeesDues,JoinDate) " +
-                "values(@Stfname,@Stlname,@Stfathername,@StfatherPhone,@StEmail,@Stphone,@CourseJoin,@CourseFees,@Firstinstallment,@FeesDues,@JoinDate)";
+            string sqlquery = "Insert into [dbo].[student1] (Stfname,Stlname,Stfathername,StfatherPhone,StEmail,Stphone,CourseJoin,CourseFees,Firstinstallment,FeesDues,JoinDate,username,password) " +
+                "values(@Stfname,@Stlname,@Stfathername,@StfatherPhone,@StEmail,@Stphone,@CourseJoin,@CourseFees,@Firstinstallment,@FeesDues,@JoinDate,@username,@password)";
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             sqlconn.Open();
 
@@ -45,6 +45,8 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@Firstinstallment", TxtCourseInstallment.Text);
             sqlcomm.Parameters.AddWithValue("@FeesDues", LabDueFees.Text);
             sqlcomm.Parameters.AddWithValue("@JoinDate", LitJoinDate.Text);
+            sqlcomm.Parameters.AddWithValue("@username", TxtSUsername.Text);
+            sqlcomm.Parameters.AddWithValue("@password", TxtSPassword.Text);
 
             sqlcomm.ExecuteNonQuery();
             Labmsg.Text = "The student " + TxtStFName.Text + " " + TxtStLName.Text + " has been saved!!! <br/> The fees has been sent to " + TxtStEmail.Text;
@@ -54,7 +56,11 @@ namespace SeniorProject_1
             mm.Body = "You just joined the class " + DDLCourseName.SelectedItem.Text + " Your current fees are: " + LabCourseFees.Text +
                 " and the installement you have paid so far is " + TxtCourseInstallment.Text +
                 "<br/> " +
-                "The balance Fees are: " + LabDueFees.Text + "<br/><h3 style='color:red'>Note: You wont be able to register for next term until the balance amount is clear</h3>";
+                "The balance Fees are: " + LabDueFees.Text + "<br/>" +
+                "Your credentials are: <br/>" +
+                "Username: " + TxtSUsername.Text + "<br/>" +
+                "Password: " + TxtSPassword.Text +
+                "<br/><h3 style='color:red'>Note: You wont be able to register for next term until the balance amount is clear</h3>";
             mm.IsBodyHtml = true;
 
             //just plain GMAIL config here
@@ -65,7 +71,7 @@ namespace SeniorProject_1
 
             // had to create new gmail account to test
             NetworkCredential nc = new NetworkCredential("teamBlue425@gmail.com", "teamBlue4252021");
-            
+
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = nc;
             smtp.EnableSsl = true;

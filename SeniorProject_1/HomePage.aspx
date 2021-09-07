@@ -88,6 +88,7 @@
 
                     <div class="field">
                         <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click" CssClass="button is-warning"/>
+                        <asp:Button ID="Button1" runat="server" Text="Cancel" OnClick="ButCancel_Click" CssClass="button is-warning"/>
                         <asp:Label id="Labmsg" runat="server" Text="" ForeColor="Red"></asp:Label>
                     </div>
 

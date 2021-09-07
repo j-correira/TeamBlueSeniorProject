@@ -39,7 +39,7 @@ namespace SeniorProject_1
         protected void LnkLogout_Click(object sender, EventArgs e)
         {
             HttpContext.Current.Session.Abandon(); // log out method
-            Response.Redirect("HomePage");
+            Response.Redirect("Login.aspx");
         }
 
         protected void LnkAdmin_Click(object sender, EventArgs e)

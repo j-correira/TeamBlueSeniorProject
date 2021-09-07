@@ -6,11 +6,7 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            height: 100px;
-            width: 245px;
-        }
-
+        
 
 
         .section{
@@ -62,7 +58,8 @@
                     </div>
 
                     <div class="field">
-                        <asp:Button ID="Button1" runat="server" Text="Login" CssClass="button is-link" OnClick="Button1_Click"/>
+                        <asp:Button ID="Button1" runat="server" Text="Login" CssClass="button is-link" OnClick="Button1_Click" style="left: 0px; top: 0px"/>
+                        <asp:Button ID="Button2" runat="server" Text="Cancel" CssClass="button is-link" OnClick="Button2_Click" style="left: 0px; top: -1px"/>
                         <br />
                         <br />
                         <asp:Label id="Labmsg" runat="server" Text="" ForeColor="Red"></asp:Label>
