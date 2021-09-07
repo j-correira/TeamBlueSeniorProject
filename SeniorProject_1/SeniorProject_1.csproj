@@ -145,6 +145,7 @@
     <None Include="Properties\PublishProfiles\TeamBlueSeniorProject - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -175,7 +176,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Student.aspx" />
+    <Content Include="StudentLogin.aspx" />
     <Content Include="StudentPage.aspx" />
+    <Content Include="TeacherLogin.aspx" />
     <Content Include="TEST.aspx" />
     <Content Include="TutorPage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -231,6 +234,13 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -253,12 +263,26 @@
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentLogin.aspx.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentLogin.aspx.designer.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentPage.aspx.cs">
       <DependentUpon>StudentPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentPage.aspx.designer.cs">
       <DependentUpon>StudentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherLogin.aspx.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherLogin.aspx.designer.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="TEST.aspx.cs">
       <DependentUpon>TEST.aspx</DependentUpon>

@@ -14,10 +14,7 @@ namespace SeniorProject_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
-            {
-                this.DataBind();
-            }
+
         }
 
         protected void Butsubmit_Click(object sender, EventArgs e)
@@ -38,7 +35,6 @@ namespace SeniorProject_1
                 GdTutor.Visible = false;
                 GdCourse.DataSource = dt;
                 GdCourse.DataBind();
-                
 
             }
             else if (DDL1.SelectedItem.Text == "student1")
@@ -99,7 +95,6 @@ namespace SeniorProject_1
 
         protected void GdCourse_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            
             int Cid = (int)GdCourse.DataKeys[e.RowIndex].Values[0];
 
             string mainconn = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
@@ -208,8 +203,9 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@Tqualification", Tqualification);
            
             sqlcomm.ExecuteNonQuery();
+
+
             sqlconn.Close();
-            GdTutor.DataBind();
         }
 
         protected void GdTutor_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -224,23 +220,11 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@id", id);
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
-            
-            GdTutor.DataBind();
-          
-
         }
 
         protected void GdTutor_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GdTutor.EditIndex = e.NewEditIndex;
-        }
-
-        protected void GdTutor_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GdTutor.EditIndex)
-            {
-                (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to edit this row?');";
-            }
         }
     }
 }

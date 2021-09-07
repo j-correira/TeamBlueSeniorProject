@@ -12,16 +12,12 @@
             <tr>
                 <td>Student First Name</td>
                 <td>
-                    <asp:TextBox ID="TxtStFName" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name cannot be blank" ControlToValidate="TxtStFName" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
+                    <asp:TextBox ID="TxtStFName" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
             <td>Student Last Name</td>
                 <td>
-                    <asp:TextBox ID="TxtStLName" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Last Name cannot be blank" ControlToValidate="TxtStLName" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
+                    <asp:TextBox ID="TxtStLName" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
             <td>Student Father Name (If dependent)</td>
@@ -37,19 +33,12 @@
             <tr>
             <td>Student Email</td>
                 <td>
-                    <asp:TextBox ID="TxtStEmail" placeholder="Enter Email" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email cannot be blank" ControlToValidate="TxtStEmail" ForeColor="Red"></asp:RequiredFieldValidator>  
-  
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TxtStEmail" ErrorMessage="Enter proper email format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>  
-                </td>
+                    <asp:TextBox ID="TxtStEmail" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
             <td>Student Phone</td>
                 <td>
-                    <asp:TextBox ID="TxtPhone" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Phone cannot be blank" ControlToValidate="TxtPhone" ForeColor="Red"></asp:RequiredFieldValidator>  
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TxtPhone" ErrorMessage="Phone number must be 10 digit" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>  
-                </td>
+                    <asp:TextBox ID="TxtPhone" runat="server"></asp:TextBox></td>
             </tr>
              <tr>
             <td>Course Name</td>
@@ -80,29 +69,9 @@
                 <td>
                     <asp:Literal ID="LitJoinDate" runat="server"></asp:Literal> </td>
             </tr>
-             <tr>
-            <td>Student Username</td>
-                <td>
-                    <asp:TextBox ID="TxtSUsername" runat="server"></asp:TextBox></td>
-            </tr>
-             <tr>
-            <td>Student Password</td>
-                <td>
-                    <asp:TextBox ID="TxtSPassword" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Password cannot be blank" ControlToValidate="TxtSPassword" ForeColor="Red"></asp:RequiredFieldValidator>  
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TxtSPassword" ControlToValidate="TxtSPasswordConfirm" ErrorMessage="Password and confirm password must be same" ForeColor="Red"></asp:CompareValidator>
-                </td>
-            </tr>
-            <tr>
-            <td>Confirm Password</td>
-                <td>
-                    <asp:TextBox ID="TxtSPasswordConfirm" runat="server"></asp:TextBox></td>
-            </tr>
             <tr>
                 <td>
                     <asp:Button ID="ButStudent" runat="server" Text="Add new Student" OnClick="ButStudent_Click" /></td>
-                <td>
-                    <asp:Button ID="butCancel" runat="server" Text="Cancel" CausesValidation="false" /></td>
                 <td>
                     <asp:Label ID="Labmsg" runat="server" Text=" " ForeColor="Green"></asp:Label></td>
             </tr>

@@ -36,7 +36,7 @@
             <center>
 
 
-                <section class="hero is-info" style="margin-bottom:35px">
+                <section class="hero is-warning" style="margin-bottom:35px">
                   <div class="hero-body">
                     <p class="title">
                       Admin Login Portal
@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="field">
-                        <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click" CssClass="button is-info"/>
+                        <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click" CssClass="button is-warning"/>
                         <asp:Label id="Labmsg" runat="server" Text="" ForeColor="Red"></asp:Label>
                     </div>
 
