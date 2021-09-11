@@ -130,7 +130,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CoursePage.aspx" />
+    <Content Include="CreateAssignments.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DocumentSaveInBinary.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -218,12 +220,26 @@
     <Compile Include="CoursePage.aspx.designer.cs">
       <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreateAssignments.aspx.cs">
+      <DependentUpon>CreateAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAssignments.aspx.designer.cs">
+      <DependentUpon>CreateAssignments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentSaveInBinary.aspx.cs">
+      <DependentUpon>DocumentSaveInBinary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentSaveInBinary.aspx.designer.cs">
+      <DependentUpon>DocumentSaveInBinary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
