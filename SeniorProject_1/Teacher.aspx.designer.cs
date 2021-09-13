@@ -11,7 +11,7 @@ namespace SeniorProject_1
 {
 
 
-    public partial class Student
+    public partial class Teacher
     {
 
         /// <summary>
@@ -24,30 +24,21 @@ namespace SeniorProject_1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// stID_LBL control.
+        /// teacherID_LBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label stID_LBL;
+        protected global::System.Web.UI.WebControls.Label teacherID_LBL;
 
         /// <summary>
-        /// studentInfo_GV control.
+        /// AddAssignment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView studentInfo_GV;
-
-        /// <summary>
-        /// classes_GV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView classes_GV;
+        protected global::System.Web.UI.WebControls.Button AddAssignment;
     }
 }

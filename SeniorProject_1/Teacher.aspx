@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="SeniorProject_1.Student" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Teacher.aspx.cs" Inherits="SeniorProject_1.Teacher" %>
 
 <!DOCTYPE html>
 
@@ -41,12 +41,12 @@
             <center>
 
 
-                <section class="hero is-info" style="margin-bottom:35px">
+                <section class="hero is-link" style="margin-bottom:35px">
                   <div class="hero-body">
                     <p class="title">
-                      Student - Home
+                      Teacher - Home
                     </p>
-                    <p class="subtitle"><asp:Label ID="stID_LBL" runat="server" Text="Welcome, "></asp:Label></p>
+                    <p class="subtitle"><asp:Label ID="teacherID_LBL" runat="server" Text="Welcome, "></asp:Label></p>
                   </div>
                 </section>
 
@@ -56,22 +56,7 @@
               <!-- new bulma login -->
               <section class="section box">
                 <div class="container">
-                    <p class="auto-style1">Student Info</p>
-
-                        <asp:GridView ID="studentInfo_GV" runat="server" CssClass="table is-striped">
-                        </asp:GridView>
-
-                    <p class="subtitle">
-
-                        &nbsp;</p>
-                    <p class="auto-style1">Classes</p>
-
-                        <asp:GridView ID="classes_GV" runat="server" CssClass="table is-striped">
-                        </asp:GridView>
-
-                  
-
-
+                    <asp:Button ID="AddAssignment" runat="server" Text="Add Assignment" CssClass="button is-link" OnClick="AddAssignment_Click"></asp:Button>      
                 </div>
               </section>
 

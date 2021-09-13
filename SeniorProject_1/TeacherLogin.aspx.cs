@@ -24,23 +24,20 @@ namespace SeniorProject_1
             SqlConnection conn = new SqlConnection("Data Source=sql.neit.edu,4500;Initial Catalog=se425_teamblue;Persist Security Info=True;User ID=teamblue;Password=neit2021");
             conn.Open();
 
-            SqlCommand command = new SqlCommand("Select Stid from [student1] where username=@u AND password=@p", conn);
+            SqlCommand command = new SqlCommand("Select personID from [Person] where LoginName=@u AND LoginPass=@p", conn);
 
             command.Parameters.AddWithValue("@u", u);
             command.Parameters.AddWithValue("@p", p);
 
-            // int result = command.ExecuteNonQuery();
-            using (SqlDataReader reader = command.ExecuteReader())
+            object result = command.ExecuteScalar();
+            if (result != null)
             {
-                if (reader.Read())
-                {
-                    Labmsg.Text = "SUCCESS! 😎 Logged in - This will then redirect to 'Student: Home'";
-                }
-                else
-                {
-                    Labmsg.Text = "Failure... 😢 Not logged in";
-                }
+                string teacherID = result.ToString();
+
+                Session["teacherID"] = teacherID;
+                Response.Redirect("Teacher.aspx");
             }
+            else { }
 
             conn.Close();
         }

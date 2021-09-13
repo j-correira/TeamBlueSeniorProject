@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <center>
 
     <div style="background-color:#dfe6e9;">
     <h1 class="title is-4" style="padding: 20px;">Adding new Assignment</h1>
@@ -51,6 +52,7 @@
     </div>
 </form>
 
+        </center>
     </body>
 </html>
 
