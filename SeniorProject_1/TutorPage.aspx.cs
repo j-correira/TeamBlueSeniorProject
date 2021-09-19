@@ -21,7 +21,7 @@ namespace SeniorProject_1
         {
             string mainconn = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "Insert into [dbo].[Tutor] (Tname,Temail,Tphone,Tcourse,Tqualification,JoinDate) values(@Tname,@Temail,@Tphone,@Tcourse,@Tqualification,@JoinDate)";
+            string sqlquery = "Insert into [dbo].[Tutor] (Tname,Temail,Tphone,Tcourse,Tqualification,JoinDate,Tusername,Tpassword) values(@Tname,@Temail,@Tphone,@Tcourse,@Tqualification,@JoinDate,@Tusername,@Tpassword)";
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             sqlconn.Open();
 
@@ -32,6 +32,8 @@ namespace SeniorProject_1
             sqlcomm.Parameters.AddWithValue("@Tcourse", DDLCourse.SelectedItem.Text);
             sqlcomm.Parameters.AddWithValue("@Tqualification", TxtQualifications.Text);
             sqlcomm.Parameters.AddWithValue("@JoinDate", LitJoinDate.Text);
+            sqlcomm.Parameters.AddWithValue("@Tusername", TxtTUsername.Text);
+            sqlcomm.Parameters.AddWithValue("@Tpassword", TxtTPassword.Text);
             sqlcomm.ExecuteNonQuery();
             Labmsg.Text = "The teacher " + TxtTutorname.Text + " has been saved!!!";
             TxtTutorname.Text = "";

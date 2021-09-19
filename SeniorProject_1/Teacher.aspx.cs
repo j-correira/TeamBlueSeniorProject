@@ -16,11 +16,11 @@ namespace SeniorProject_1
             conn.Open();
 
             //session variable
-            string teacherID = (String)System.Web.HttpContext.Current.Session["teacherID"];
+            string teacherID = (String)System.Web.HttpContext.Current.Session["teacherid"];
             //teacherID_LBL.Text += teacherID;
 
             //test getting student first name
-            SqlCommand command = new SqlCommand("Select pFName from [Person] where personID = " + teacherID, conn);
+            SqlCommand command = new SqlCommand("Select TName from [Tutor] where id = " + teacherID, conn);
             object id = command.ExecuteScalar();
 
             string teacher_Fname = id.ToString();

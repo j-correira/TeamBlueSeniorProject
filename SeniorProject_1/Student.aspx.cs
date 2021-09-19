@@ -21,12 +21,12 @@ namespace SeniorProject_1
 
 
             //test getting student first name
-            SqlCommand command = new SqlCommand("Select Stfname from [student1] where StudentID = " + stID, conn);
+            SqlCommand command = new SqlCommand("Select Stfname from [student1] where Stid = " + stID, conn);
             object id = command.ExecuteScalar();
 
 
             //all student info
-            SqlCommand command2 = new SqlCommand("Select Stfname, Stlname, FeesDues from [student1] where StudentID = " + stID, conn);
+            SqlCommand command2 = new SqlCommand("Select Stfname, Stlname, FeesDues from [student1] where Stid = " + stID, conn);
             //object all = command2.ExecuteScalar();
 
             SqlDataAdapter sda = new SqlDataAdapter(command2);

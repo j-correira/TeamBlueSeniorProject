@@ -25,7 +25,7 @@ namespace SeniorProject_1
             SqlConnection conn = new SqlConnection("Data Source=sql.neit.edu,4500;Initial Catalog=se425_teamblue;Persist Security Info=True;User ID=teamblue;Password=neit2021");
             conn.Open();
 
-            SqlCommand command = new SqlCommand("Select StudentID from [student1] where username=@u AND password=@p", conn);
+            SqlCommand command = new SqlCommand("Select Stid from [student1] where username=@u AND password=@p", conn);
 
 
 

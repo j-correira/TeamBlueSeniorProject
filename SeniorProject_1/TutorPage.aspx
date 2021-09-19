@@ -53,6 +53,17 @@
                     </td>
             </tr>
             <tr>
+            <td>Teacher Username</td>
+                <td>
+                    <asp:TextBox ID="TxtTUsername" runat="server"></asp:TextBox></td>
+            </tr>
+             <tr>
+            <td>Teacher Password</td>
+                <td>
+                    <asp:TextBox ID="TxtTPassword" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
                 <td><asp:Button ID="ButTutor" runat="server" Text="Insert" OnClick="ButTutor_Click" /></td>
                 <td>
                     <asp:Label ID="Labmsg" runat="server" Text="" ForeColor="Green"></asp:Label></td>
