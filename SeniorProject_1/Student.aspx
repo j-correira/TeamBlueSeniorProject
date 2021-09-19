@@ -56,6 +56,8 @@
               <!-- new bulma login -->
               <section class="section box">
                 <div class="container">
+                    <asp:Button runat="server" ID="btnViewClasses" Text="View Classes" OnClick="btnViewClasses_Click"/>
+                    <asp:Button runat="server" Text="View Student Info"/>
                     <p class="auto-style1">Student Info</p>
 
                         <asp:GridView ID="studentInfo_GV" runat="server" CssClass="table is-striped">

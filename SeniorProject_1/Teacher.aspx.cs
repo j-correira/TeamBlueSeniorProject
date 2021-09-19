@@ -33,5 +33,10 @@ namespace SeniorProject_1
             Response.Redirect("CreateAssignments.aspx");
 
         }
+
+        protected void ViewSubmittedAssignment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TeacherViewSubmittedAssignments.aspx");
+        }
     }
 }

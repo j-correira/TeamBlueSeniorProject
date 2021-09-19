@@ -68,15 +68,13 @@ namespace SeniorProject_1
                                 string constr = ConfigurationManager.ConnectionStrings["se425_teamblue-ConnectionString"].ConnectionString;
                                 using (SqlConnection con = new SqlConnection(constr))
                                 {
-                                    string query = "insert into tblCreateAssignment values (@Name, @WeekNumber, @Data, @ContentType, @fileName)";
+                                    string query = "insert into tblFiles values (@Name, @ContentType, @Data)";
                                     using (SqlCommand cmd = new SqlCommand(query))
                                     {
                                         cmd.Connection = con;
-                                        cmd.Parameters.AddWithValue("@Name", TxtAssignname.Text);
-                                        cmd.Parameters.AddWithValue("@WeekNumber", TxtAssignWeek.Text);
-                                        cmd.Parameters.AddWithValue("@Data", bytes);
+                                        cmd.Parameters.AddWithValue("@Name", filename);
                                         cmd.Parameters.AddWithValue("@ContentType", contentType);
-                                        cmd.Parameters.AddWithValue("@fileName", filename);
+                                        cmd.Parameters.AddWithValue("@Data", bytes);
                                         con.Open();
                                         cmd.ExecuteNonQuery();
                                         con.Close();
@@ -87,36 +85,41 @@ namespace SeniorProject_1
                         }
                         // use to clear the FileUpload to avoid previuos file insertion
                         FileUpload2.PostedFile.InputStream.Dispose();
-                        lblSuccess.Text = "";
+                        lblSuccess.Text = "Thanks. Your file has been" + "<br />" +  "uploaded successfully.";
+                        lblSuccess.ForeColor = System.Drawing.Color.Green;
 
-                        // calling again to re-populate datagrid after new record insert
-                        BindGrid();
                     }
                     else
                     {
-                        lblSuccess.Text = "Your file was not uploaded because " +
+                        lblSuccess.Text = "Your file was not uploaded because " + "<br />" +
                                              "it exceeds the 2 MB size limit.";
                         lblSuccess.ForeColor = System.Drawing.Color.Red;
                     }
                 }
                 else
                 {
-                    lblSuccess.Text = "Your file was not uploaded because " +
-                                         "it does not have a .doc, .docx, .pdf or .txt extension.";
+                    lblSuccess.Text = "Your file was not uploaded because " + "<br />" +
+                                         "it does not have a .doc, .docx, .pdf or " + "<br />" + ".txt extension.";
                     lblSuccess.ForeColor = System.Drawing.Color.Red;
                 }
 
+                
 
             }
+           
             else
             {
                 lblSuccess.Text = "Please select a file to upload";
                 lblSuccess.ForeColor = System.Drawing.Color.Red;
             }
 
-            //Response.Redirect(Request.Url.AbsoluteUri);
+            
 
         }
-        
+
+        protected void butCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Teacher.aspx");
+        }
     }
 }

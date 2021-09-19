@@ -27,7 +27,7 @@ namespace SeniorProject_1
 
             //all student info
             SqlCommand command2 = new SqlCommand("Select Stfname, Stlname, FeesDues from [student1] where StudentID = " + stID, conn);
-            object all = command2.ExecuteScalar();
+            //object all = command2.ExecuteScalar();
 
             SqlDataAdapter sda = new SqlDataAdapter(command2);
             DataSet ds = new DataSet();
@@ -38,7 +38,7 @@ namespace SeniorProject_1
 
             //all classes student is signed up for
             SqlCommand command3 = new SqlCommand("Select className, classCredits, TeacherID from [class] where StudentID = " + stID, conn);
-            object classes = command3.ExecuteScalar();
+            //object classes = command3.ExecuteScalar();
 
             SqlDataAdapter sda3 = new SqlDataAdapter(command3);
             DataSet ds3 = new DataSet();
@@ -52,12 +52,11 @@ namespace SeniorProject_1
             stID_LBL.Text += student_Fname;
 
 
+        }
 
-
-
-
-
-
+        protected void btnViewClasses_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Class.aspx");
         }
     }
 }

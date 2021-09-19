@@ -13,5 +13,10 @@ namespace SeniorProject_1
         {
 
         }
+
+        protected void btnViewAssigments_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StudentViewSubmitAssignment.aspx");
+        }
     }
 }

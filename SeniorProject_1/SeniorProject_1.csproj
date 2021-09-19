@@ -182,8 +182,10 @@
     <Content Include="StudentHome.aspx" />
     <Content Include="StudentLogin.aspx" />
     <Content Include="StudentPage.aspx" />
+    <Content Include="StudentViewSubmitAssignment.aspx" />
     <Content Include="Teacher.aspx" />
     <Content Include="TeacherLogin.aspx" />
+    <Content Include="TeacherViewSubmittedAssignments.aspx" />
     <Content Include="TEST.aspx" />
     <Content Include="TutorPage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -310,6 +312,13 @@
     <Compile Include="StudentPage.aspx.designer.cs">
       <DependentUpon>StudentPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentViewSubmitAssignment.aspx.cs">
+      <DependentUpon>StudentViewSubmitAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentViewSubmitAssignment.aspx.designer.cs">
+      <DependentUpon>StudentViewSubmitAssignment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.aspx.cs">
       <DependentUpon>Teacher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -323,6 +332,13 @@
     </Compile>
     <Compile Include="TeacherLogin.aspx.designer.cs">
       <DependentUpon>TeacherLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherViewSubmittedAssignments.aspx.cs">
+      <DependentUpon>TeacherViewSubmittedAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherViewSubmittedAssignments.aspx.designer.cs">
+      <DependentUpon>TeacherViewSubmittedAssignments.aspx</DependentUpon>
     </Compile>
     <Compile Include="TEST.aspx.cs">
       <DependentUpon>TEST.aspx</DependentUpon>

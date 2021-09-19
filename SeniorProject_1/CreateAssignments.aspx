@@ -42,10 +42,16 @@
                 <td>
                     <asp:FileUpload ID="FileUpload2" runat="server" Height="38px" Width="299px" /><br /><br /></td>
             </tr>
+                           
+            
             <tr>
                 <td><asp:Button ID="ButCreateAssignment" runat="server" Text="Insert" OnClick="ButCreateAssignment_Click" /></td>
                 <td>
-                    <asp:Label ID="lblSuccess" runat="server" Text="" ForeColor="Green"></asp:Label></td>
+                    <asp:Button ID="butCancel" runat="server" Text="Go Back" CausesValidation="false" OnClick="butCancel_Click" />
+                    <br />
+                    <asp:Label ID="lblSuccess" runat="server" Text="" ForeColor="Green"></asp:Label>
+                </td>
+                
             </tr>
 
         </table>

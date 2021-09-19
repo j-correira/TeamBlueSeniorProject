@@ -57,6 +57,7 @@
               <section class="section box">
                 <div class="container">
                     <asp:Button ID="AddAssignment" runat="server" Text="Add Assignment" CssClass="button is-link" OnClick="AddAssignment_Click"></asp:Button>      
+                    <asp:Button ID="ViewSubmittedAssignment" runat="server" Text="View Submitted Assignment" CssClass="button is-link" OnClick="ViewSubmittedAssignment_Click"></asp:Button>      
                 </div>
               </section>
 
