@@ -28,6 +28,22 @@
             text-decoration: underline;
         }
 
+        .classCard {
+            width: 77%;
+        }
+
+        .classCardHeader {
+            background-color: #3e8ed0;
+            height: 160px;
+        }
+
+
+        .card-content {
+            background-color: transparent;
+            padding: 1.5rem;
+            background-color: #3e8ed0;
+        }
+
     </style>
 
 
@@ -56,10 +72,89 @@
               <!-- new bulma login -->
               <section class="section box">
                 <div class="container">
-                    <asp:Button ID="AddAssignment" runat="server" Text="Add Assignment" CssClass="button is-link" OnClick="AddAssignment_Click"></asp:Button>      
-                    <asp:Button ID="ViewSubmittedAssignment" runat="server" Text="View Submitted Assignment" CssClass="button is-link" OnClick="ViewSubmittedAssignment_Click"></asp:Button>      
-                </div>
-              </section>
+
+                    <p class="title">
+                      <u>Classes</u>
+                    </p>
+
+
+                    <br />
+
+
+
+
+                    <div class="columns">
+
+
+
+                        <div class="column">                                  
+                            <!-- english -->
+                            <div class="card classCard">
+                              <div class="card-content classCardHeader" style="background-color: #3e8ed0; height: 230px;"">
+                                <p class="title is-2" style="color:white; text-align: left;">
+                                 <u>EN421</u>
+                                </p>
+                                <p class="subtitle is-3" style="color:white; text-align: left;">
+                                  Technical Communication
+                                </p>
+                              </div>
+                              <footer class="card-footer">
+                                <p class="card-footer-item">
+                                  <span>
+                                    <asp:Button ID="AddAssignment" runat="server" Text="Add Assignment" CssClass="button is-info" OnClick="AddAssignment_Click"></asp:Button>      
+                                  </span>
+                                </p>
+                                <p class="card-footer-item">
+                                  <span>
+                                    <asp:Button ID="ViewSubmittedAssignment" runat="server" Text="View Submitted Assignment" CssClass="button is-info" OnClick="ViewSubmittedAssignment_Click"></asp:Button>      
+                                  </span>
+                                </p>
+                              </footer>
+                            </div>
+                    </div> <!-- / column -->
+
+
+
+
+
+
+
+                        <div class="column">                                  
+                            <!-- english -->
+                            <div class="card classCard">
+                              <div class="card-content classCardHeader" style="background-color: #3a51bb; height: 230px;"">
+                                <p class="title is-2" style="color:white; text-align: left;">
+                                 <u>EN331</u>
+                                </p>
+                                <p class="subtitle is-3" style="color:white; text-align: left;">
+                                  Research Writing
+                                </p>
+                              </div>
+                              <footer class="card-footer">
+                                <p class="card-footer-item">
+                                  <span>
+                                    <button class="button is-link" title="Disabled button" disabled>Add Assignment</button>      
+                                  </span>
+                                </p>
+                                <p class="card-footer-item">
+                                  <span>
+                                    <button class="button is-link" title="Disabled button" disabled>View Submitted Assignments</button>      
+                                  </span>
+                                </p>
+                              </footer>
+                            </div>
+                    </div> <!-- / column -->
+
+
+
+
+
+
+
+                    </div> <!-- / columnS -->
+
+                </div> <!-- / container -->
+              </section> <!-- / section -->
 
             </center>
 

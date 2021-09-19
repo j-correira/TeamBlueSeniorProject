@@ -17,6 +17,14 @@
 
     <center>
 
+            <section class="hero is-link" style="">
+        <div class="hero-body">
+        <p class="title">
+            Teacher
+        </p>
+        </div>
+    </section>
+
     <div style="background-color:#dfe6e9;">
     <h1 class="title is-4" style="padding: 20px;">Adding new Assignment</h1>
     </div>
@@ -25,7 +33,7 @@
 
 
 <form id="frm" runat="server">
-    <div class="box" style="width:80%; margin-top: 30px;">
+    <div class="box" style="width:80%; margin-top: 50px;height: 380px;padding-top: 50px;">
         <table class="table is-striped">
             <tr>
                 <td>Assignment name: </td>
@@ -40,14 +48,14 @@
             <tr>
                 <td>Attachment: </td>
                 <td>
-                    <asp:FileUpload ID="FileUpload2" runat="server" Height="38px" Width="299px" /><br /><br /></td>
+                    <asp:FileUpload ID="FileUpload2" runat="server" Height="38px" Width="299px" CssClass="button is-light" /><br /><br /></td>
             </tr>
                            
             
             <tr>
-                <td><asp:Button ID="ButCreateAssignment" runat="server" Text="Insert" OnClick="ButCreateAssignment_Click" /></td>
+                <td><asp:Button ID="ButCreateAssignment" runat="server" Text="Insert" OnClick="ButCreateAssignment_Click" CssClass="button is-success" /></td>
                 <td>
-                    <asp:Button ID="butCancel" runat="server" Text="Go Back" CausesValidation="false" OnClick="butCancel_Click" />
+                    <asp:Button ID="butCancel" runat="server" Text="Go Back" CausesValidation="false" OnClick="butCancel_Click" CssClass="button is-warning" />
                     <br />
                     <asp:Label ID="lblSuccess" runat="server" Text="" ForeColor="Green"></asp:Label>
                 </td>
@@ -59,6 +67,17 @@
 </form>
 
         </center>
+
+
+        <footer class="footer" style=" width: 100%; bottom:0px; margin-top: 85px;">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Team Blue</strong> • Student Management System - 2021 • <a href="https://github.com/j-correira/TeamBlueSeniorProject"><b>View on github</b></a>
+    </p>
+  </div>
+</footer>
+
+
     </body>
 </html>
 
