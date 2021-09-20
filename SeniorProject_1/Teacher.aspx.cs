@@ -38,5 +38,11 @@ namespace SeniorProject_1
         {
             Response.Redirect("TeacherViewSubmittedAssignments.aspx");
         }
+
+        protected void logout_BTN_Click(object sender, EventArgs e)
+        {
+            HttpContext.Current.Session.Abandon(); // log out method
+            Response.Redirect("Login.aspx");
+        }
     }
 }

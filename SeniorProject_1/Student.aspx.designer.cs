@@ -33,30 +33,57 @@ namespace SeniorProject_1
         protected global::System.Web.UI.WebControls.Label stID_LBL;
 
         /// <summary>
-        /// btnViewClasses control.
+        /// logout_BTN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewClasses;
+        protected global::System.Web.UI.WebControls.Button logout_BTN;
 
         /// <summary>
-        /// studentInfo_GV control.
+        /// name_LBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView studentInfo_GV;
+        protected global::System.Web.UI.WebControls.Label name_LBL;
 
         /// <summary>
-        /// classes_GV control.
+        /// email_LBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView classes_GV;
+        protected global::System.Web.UI.WebControls.Label email_LBL;
+
+        /// <summary>
+        /// username_LBL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label username_LBL;
+
+        /// <summary>
+        /// fees_LBL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fees_LBL;
+
+        /// <summary>
+        /// ViewAssignment_BTN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewAssignment_BTN;
     }
 }

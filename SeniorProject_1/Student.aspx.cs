@@ -20,9 +20,35 @@ namespace SeniorProject_1
             string stID = (String)System.Web.HttpContext.Current.Session["studentID"];
 
 
-            //test getting student first name
+            //get student info
             SqlCommand command = new SqlCommand("Select Stfname from [student1] where Stid = " + stID, conn);
             object id = command.ExecuteScalar();
+
+            SqlCommand lastName_COMM = new SqlCommand("Select Stlname from [student1] where Stid = " + stID, conn);
+            object lastName = lastName_COMM.ExecuteScalar();
+
+            SqlCommand email_COMM = new SqlCommand("Select StEmail from [student1] where Stid = " + stID, conn);
+            object email = email_COMM.ExecuteScalar();
+
+            SqlCommand username_COMM = new SqlCommand("Select username from [student1] where Stid = " + stID, conn);
+            object username = username_COMM.ExecuteScalar();
+
+            SqlCommand fees_COMM = new SqlCommand("Select FeesDues from [student1] where Stid = " + stID, conn);
+            object fees = fees_COMM.ExecuteScalar();
+
+            string student_Fname = id.ToString();
+            string student_Lname = lastName.ToString();
+            string student_email = email.ToString();
+            string student_username = username.ToString();
+            string student_fees = fees.ToString();
+
+            name_LBL.Text = student_Fname + " " + student_Lname;
+            email_LBL.Text = student_email;
+            username_LBL.Text = student_username;
+            fees_LBL.Text += student_fees;
+
+            stID_LBL.Text += student_Fname;
+
 
 
             //all student info
@@ -32,8 +58,7 @@ namespace SeniorProject_1
             SqlDataAdapter sda = new SqlDataAdapter(command2);
             DataSet ds = new DataSet();
             sda.Fill(ds);
-            studentInfo_GV.DataSource = ds;
-            studentInfo_GV.DataBind();
+
 
 
             //all classes student is signed up for
@@ -43,13 +68,12 @@ namespace SeniorProject_1
             SqlDataAdapter sda3 = new SqlDataAdapter(command3);
             DataSet ds3 = new DataSet();
             sda3.Fill(ds3);
-            classes_GV.DataSource = ds3;
-            classes_GV.DataBind();
+            //classes_GV.DataSource = ds3;
+            //classes_GV.DataBind();
 
 
 
-            string student_Fname = id.ToString();
-            stID_LBL.Text += student_Fname;
+
 
 
         }
@@ -57,6 +81,17 @@ namespace SeniorProject_1
         protected void btnViewClasses_Click(object sender, EventArgs e)
         {
             Response.Redirect("Class.aspx");
+        }
+
+        protected void ViewAssignment_BTN_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StudentViewSubmitAssignment.aspx");
+        }
+
+        protected void logout_BTN_Click(object sender, EventArgs e)
+        {
+            HttpContext.Current.Session.Abandon(); // log out method
+            Response.Redirect("Login.aspx");
         }
     }
 }

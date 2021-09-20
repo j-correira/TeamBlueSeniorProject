@@ -22,7 +22,7 @@
             <center>
 
                 <!-- header -->
-                <div id="nav" style="background-color:#3e8ed0; padding-bottom: 15px;">
+                <div id="nav" style="background-color:#48c78e; padding-bottom: 15px;">
                     <h1 class="title is-3" style="color:white; padding-top:20px;">Welcome!</h1>
                     <h2 class="subtitle is-6" style="color:white"><%= DateTime.Now %></h2>
                 </div>
@@ -32,6 +32,19 @@
                     <h1 class="title is-4" style="padding: 20px;">Login Page</h1>
                 </div>
 
+                                <div id="Carousel" class="carousel slide" data-interval="9000" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="carousel-caption">
+                            <img src="Books_New-e1611252343470.jpg" alt="tittle" width="300" height="400"/>
+                            <h3>Welcome Students</h3>
+                        </div>
+
+        </div>
 
                 <!-- testing button design 
                 <div class="box" style="width:80%; margin-top: 30px;">
@@ -69,7 +82,7 @@
                 <div class="box" style="width:40%; margin-top: 30px;">
 
                     <p class="title is-5">
-                        <asp:LinkButton ID="StudentLogin_BTN" runat="server" Text="<i class='fas fa-user-graduate'></i> &nbsp; Student" CssClass="button is-success is-medium loginBTNs" OnClick="StudentLogin_BTN_Click"/>
+                        <asp:LinkButton ID="StudentLogin_BTN" runat="server" Text="<i class='fas fa-user-graduate'></i> &nbsp; Student" CssClass="button is-info is-medium loginBTNs" OnClick="StudentLogin_BTN_Click"/>
                     </p>
                     <p class="title is-5">
                         <asp:LinkButton ID="TeacherLogin_BTN" runat="server" Text="<i class='fas fa-chalkboard-teacher'></i> &nbsp; Teacher" CssClass="button is-link is-medium loginBTNs" OnClick="TeacherLogin_BTN_Click"/>
@@ -80,35 +93,7 @@
 
 
                 </div>
-                <div id="Carousel" class="carousel slide" data-interval="9000" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="active item">
-                        <div class="carousel-caption">
-                            <img src="Books_New-e1611252343470.jpg" alt="tittle" width="300" height="400"/>
-                            <h3>Welcome Students</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption">
-                            <h3>Current semestier</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-        </div>
+
 
 
 

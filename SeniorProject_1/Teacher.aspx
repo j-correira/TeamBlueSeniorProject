@@ -63,6 +63,9 @@
                       Teacher - Home
                     </p>
                     <p class="subtitle"><asp:Label ID="teacherID_LBL" runat="server" Text="Welcome, "></asp:Label></p>
+
+                      <asp:Button ID="logout_BTN" runat="server" Text="Log Out" CssClass="button is-warning is-outlined" OnClick="logout_BTN_Click"></asp:Button>
+
                   </div>
                 </section>
 
@@ -122,7 +125,7 @@
                         <div class="column">                                  
                             <!-- english -->
                             <div class="card classCard">
-                              <div class="card-content classCardHeader" style="background-color: #3a51bb; height: 230px;"">
+                              <div class="card-content classCardHeader" style="background-color: #a2aee2; height: 230px;"">
                                 <p class="title is-2" style="color:white; text-align: left;">
                                  <u>EN331</u>
                                 </p>

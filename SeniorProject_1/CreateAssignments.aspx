@@ -20,14 +20,13 @@
             <section class="hero is-link" style="">
         <div class="hero-body">
         <p class="title">
-            Teacher
+            Teacher - Create New Assignment
         </p>
+        <p class="subtitle">Upload Assignment Document</p>
         </div>
     </section>
 
-    <div style="background-color:#dfe6e9;">
-    <h1 class="title is-4" style="padding: 20px;">Adding new Assignment</h1>
-    </div>
+
 
 
 
