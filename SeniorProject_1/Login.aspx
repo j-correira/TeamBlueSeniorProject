@@ -40,7 +40,6 @@
                 <div class="carousel-inner">
                     <div class="active item">
                         <div class="carousel-caption">
-                            <img src="Books_New-e1611252343470.jpg" alt="tittle" width="300" height="400"/>
                             <h3>Welcome Students</h3>
                         </div>
 
